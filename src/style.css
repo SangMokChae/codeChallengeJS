@@ -1,0 +1,254 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap"); /*영어 font */
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap"); /*국어 font */
+
+body {
+  padding: 25px 50px;
+  /* ko-font = font-family: 'Hi Melody', cursive; */
+  font-family: "Anton", sans-serif; /*영어 font */
+}
+
+/* background */
+@keyframes comeBg {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  animation: comeBg 0.7s linear;
+}
+
+/* top */
+.top,
+.js-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#js-clock {
+  font-size: 45px;
+  text-shadow: 1px 1px 3px white, 2px 2px 5px rgb(243, 52, 52),
+    1px 1px 3px white;
+}
+
+.js-weather {
+  font-size: 25px;
+}
+
+/* greetings and dynamic */
+#js-form,
+#js-hello,
+#dynamic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#js-form,
+#js-hello {
+  margin-top: 20px;
+}
+
+#js-form > input {
+  width: 300px;
+  padding: 20px;
+  outline: none;
+  font-size: 25px;
+  color: white;
+  text-shadow: 0 0 5px rgb(49, 114, 255);
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+#js-form > input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#js-hello {
+  font-size: 80px;
+  text-transform: uppercase;
+  text-shadow: red 1px 3px;
+}
+
+.dynamic__box {
+  margin-top: 20px;
+}
+
+#dynamic {
+  font-size: 30px;
+  color: #ffd700;
+  text-shadow: red 1px 3px, black 1.5px 3px;
+}
+
+/* toDoList and calender */
+.board {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding: 0 10%;
+  font-family: "Hi Melody", cursive;
+}
+
+/* calender */
+.container {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 40px;
+}
+
+.calendar-box,
+.cal-table,
+.cal-body,
+tr {
+  width: 100%;
+}
+
+@keyframes changeColor {
+  0% {
+    color: white;
+  }
+  25% {
+    color: #3c8c40;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: crimson;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.cal-day {
+  font-size: 75px;
+  font-weight: 600;
+  animation: changeColor 10s linear infinite;
+}
+
+.cal-date {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 64px;
+  animation: changeColor 10s 2s linear infinite;
+}
+
+.ctr-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal-month,
+.cal-year {
+  color: white;
+  text-shadow: 1px 1px 3px white, 2px 2px 5px rgb(243, 52, 52);
+  padding: 0px 5px;
+}
+
+.btn-cal {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 80px;
+  font-size: 20px;
+  outline: none;
+  background-color: rgba(31, 143, 255, 0.8);
+  color: white;
+}
+
+.day {
+  padding: 3px 5px;
+}
+
+tr > th:first-child,
+.day:first-child {
+  color: red;
+}
+
+tr > th:last-child,
+.day:last-child {
+  color: blue;
+}
+
+/* toDoList */
+.toDoList-container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#js-toDoForm > input {
+  width: 80%;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  background-color: rgba(0, 255, 255, 0.15);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.notover-box {
+  height: 400px;
+  overflow: auto;
+}
+
+#js-toDoList > li {
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+#js-toDoList > li > button {
+  margin: 0 5px 10px 5px;
+  padding: 3px;
+  border-radius: 20px;
+  border: 1px solid black;
+  outline: none;
+}
+
+#js-toDoList > li > button:active {
+  transform: scale(0.9);
+  background-color: rgb(150, 149, 151);
+}
+
+.midline {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* sites */
+.sites {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconImg {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}

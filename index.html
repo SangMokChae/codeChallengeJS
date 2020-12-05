@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.css">
+  <title>Chrome App</title>
+</head>
+<body>
+
+  <top class="top">
+    <div id="js-clock">
+      <h1>00:00:00</h1>
+    </div>
+    <div class="js-weather">
+      <span id="weather"></span>
+      <img src="https://openweathermap.org/img/wn/01d@2x.png" class="weatherIcon"/>
+    </div>
+  </top>
+
+  <form id="js-form">
+    <input type="text" placeholder="what is your name??">
+  </form>
+
+  <h4 id="js-hello"></h4>
+  <div class="dynamic__box">
+    <p id="dynamic"></p>
+  </div>
+
+  <div class="board">
+    <!-- 달력 -->
+    <div class="container">
+      <div class="calendar">
+        <div class="clicked-date">
+          <div class="cal-day"></div>
+          <div class="cal-date"></div>
+        </div>
+      </div>
+      <div class="calender-box">
+        <div class="ctr-box clearfix">
+          <button type="button" title="prev" class="btn-cal prev"></button>
+          <span class="cal-month"></span>
+          <span class="cal-year"></span>
+          <button type="button" title="next" class="btn-cal next"></button>
+        </div>
+        <table class="cal-talbe">
+          <thead>
+            <tr>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>T</th>
+              <th>F</th>
+              <th>S</th>
+            </tr>
+          </thead>
+          <tbody class="cal-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- todoList -->
+    <div class="toDoList-container">
+      <form id="js-toDoForm">
+        <input type="text" placeholder="✏ What will you do??" />
+      </form>
+      <div class="notover-box">
+        <ul id="js-toDoList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sites">
+    <a href="https://nomadcoders.co/" target="_blank"><img src="https://nomadcoders.co/m.png" class="iconImg"></a>
+    <a href="https://www.netflix.com/browse"><img src="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" class="iconImg"></a>
+    <a href="https://www.naver.com/"><img src="https://www.naver.com/favicon.ico?1" class="iconImg"></a>
+    <a href="https://www.google.com"><img src="https://www.google.com/favicon.ico?1" class="iconImg"></a>
+    <a href="https://github.com/"><img src="https://github.com/fluidicon.png" class="iconImg"></a>
+  </div>
+
+  <script src="src/clock.js"></script>
+  <script src="src/hello.js"></script>
+  <script src="src/dynamic.js"></script>
+  <script src="src/todo.js"></script>
+  <script src="src/weather.js"></script>
+  <script src="src/bg.js"></script>
+  <script src="src/calender.js"></script>
+</body>
+</html>

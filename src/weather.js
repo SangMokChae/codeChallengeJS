@@ -1,7 +1,7 @@
 const weatherSpan = document.querySelector("#weather");
 const weatherIcon = document.querySelector(".weatherIcon");
 
-const API_KEY = "1c6d957a844df25e9baa215d1e2e303a";
+const API_KEY = "b62020883b35c55f405ea3737ccc87bc";
 
 const COORDS = "coords";
 
@@ -14,9 +14,10 @@ function getWeather(lat, lon) {
   .then(res => res.json())
   .then(data => {
     const temp = data.main.temp;
+    const place = data.name;
     const weathers = data.weather[data.weather.length - 1];
     weatherIcon.src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
-    weatherSpan.innerHTML = `${temp} °C ${weathers.main}`;
+    weatherSpan.innerHTML = `${place} / ${temp} °C / ${weathers.main}`;
   })
 }
 
